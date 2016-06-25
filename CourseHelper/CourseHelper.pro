@@ -14,10 +14,19 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    productmodifydialog.cpp
+    productmodifydialog.cpp \
+    recipemodifydialog.cpp \
+    product.cpp \
+    recipe.cpp \
+    shoppinglist.cpp
 
 HEADERS  += mainwindow.h \
-    productmodifydialog.h
+    productmodifydialog.h \
+    recipemodifydialog.h \
+    product.h \
+    recipe.h \
+    shoppinglist.h
 
 FORMS    += mainwindow.ui \
-    productmodifydialog.ui
+    productmodifydialog.ui \
+    recipemodifydialog.ui
