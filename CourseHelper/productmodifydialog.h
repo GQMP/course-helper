@@ -12,7 +12,7 @@ class ProductModifyDialog : public QDialog
   Q_OBJECT
 
   public:
-    explicit ProductModifyDialog(QWidget *parent = 0);
+    explicit ProductModifyDialog(QWidget *parent = 0,bool isNew = false);
     ~ProductModifyDialog();
 
   private:

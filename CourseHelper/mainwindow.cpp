@@ -1,15 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "productmodifydialog.h"
 
-// Constructeur
 MainWindow::MainWindow(QWidget *parent) :
-  QMainWindow(parent), ui(new Ui::MainWindow)
+  QMainWindow(parent),
+  ui(new Ui::MainWindow)
   {
-    ui->setupUi(this);
+  ui->setupUi(this);
   }
 
-// Destructeur
+void MainWindow::on_addProduct()
+  {
+  ProductModifyDialog w(this,true);
+  w.exec();
+  }
+
 MainWindow::~MainWindow()
   {
-    delete ui;
+  delete ui;
   }

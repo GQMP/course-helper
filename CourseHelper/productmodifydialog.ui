@@ -2,24 +2,36 @@
 <ui version="4.0">
  <class>ProductModifyDialog</class>
  <widget class="QDialog" name="ProductModifyDialog">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>258</width>
-    <height>128</height>
+    <width>260</width>
+    <height>140</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>Dialog</string>
+  <property name="minimumSize">
+   <size>
+    <width>260</width>
+    <height>140</height>
+   </size>
   </property>
-  <property name="sizeGripEnabled">
-   <bool>true</bool>
+  <property name="maximumSize">
+   <size>
+    <width>260</width>
+    <height>140</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Modifier un produit</string>
   </property>
   <property name="modal">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="_centralWidgetLayout">
    <property name="leftMargin">
     <number>9</number>
    </property>
@@ -45,27 +57,27 @@
      </property>
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="_labelProduct">
         <property name="text">
          <string>Nom du produit :</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="productName"/>
       </item>
       <item row="1" column="0">
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="_labelMeasure">
         <property name="text">
          <string>Mesure utilisée : </string>
         </property>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QComboBox" name="comboBox">
+       <widget class="QComboBox" name="productMeasure">
         <item>
          <property name="text">
-          <string>Litres</string>
+          <string>Quantité</string>
          </property>
         </item>
         <item>
@@ -75,7 +87,7 @@
         </item>
         <item>
          <property name="text">
-          <string>Quantité</string>
+          <string>Litres</string>
          </property>
         </item>
        </widget>
@@ -84,9 +96,9 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="_horizontalLayout">
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="_hs">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -99,14 +111,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="okButton">
        <property name="text">
         <string>Modifier</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="cancelButton">
        <property name="text">
         <string>Annuler</string>
        </property>

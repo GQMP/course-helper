@@ -6,9 +6,11 @@
 class Product
   {
     public:
+      enum Measure { Liters, Grams, Quantity };
+
       std::string name;
-      enum Measure { liters, grams, quantity };
-      Product(std::string new_name = "", Measure new_measure = liters);
+      Measure measure;
+      Product(std::string new_name = "", Measure new_measure = Liters);
   };
 
 #endif // PRODUCT_H

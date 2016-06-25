@@ -1,27 +1,25 @@
 #ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+  #define MAINWINDOW_H
 
-#include <vector>
-#include <QMainWindow>
+  #include <QMainWindow>
 
-namespace Ui
-  {
-    class MainWindow;
-  }
+namespace Ui {
+class MainWindow;
+}
 
 class MainWindow : public QMainWindow
   {
-    Q_OBJECT
+  Q_OBJECT
 
-    public:
-      explicit MainWindow(QWidget *parent = 0);
-      ~MainWindow();
+  public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
 
-    private:
-      std::vector<Product> mainProductList;
-      std::vector<Recipe> mainRecipeList;
-      std::vector<ShoppingList> mainShoppingList;
-      Ui::MainWindow *ui;
+  private:
+    Ui::MainWindow *ui;
+
+  public slots:
+    void on_addProduct();
   };
 
 #endif // MAINWINDOW_H

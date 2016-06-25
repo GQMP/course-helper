@@ -6,15 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>582</width>
+    <width>600</width>
     <height>450</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Course Helper</string>
   </property>
   <widget class="QWidget" name="_centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="_centralWidgetLayout">
     <property name="leftMargin">
      <number>6</number>
     </property>
@@ -54,7 +60,7 @@
        <attribute name="title">
         <string>Listes de courses</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="_courseTabLayout">
         <item>
          <layout class="QVBoxLayout" name="_courseLayout1">
           <item>
@@ -191,7 +197,7 @@
        <attribute name="title">
         <string>Recettes</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="_recetteTabLayout">
         <item>
          <layout class="QVBoxLayout" name="_recetteLayout2">
           <item>
@@ -288,7 +294,7 @@
        <attribute name="title">
         <string>Produits</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <layout class="QHBoxLayout" name="_productTabLayout">
         <item>
          <layout class="QVBoxLayout" name="_produitLayout1">
           <item>
@@ -393,8 +399,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>582</width>
-     <height>21</height>
+     <width>600</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -443,5 +449,24 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>produitAddButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_addProduct()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>543</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>224</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
+ <slots>
+  <slot>on_addProduct()</slot>
+ </slots>
 </ui>
