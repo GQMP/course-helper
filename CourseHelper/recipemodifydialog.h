@@ -3,20 +3,21 @@
 
 #include <QDialog>
 
-namespace Ui {
-class RecipeModifyDialog;
-}
+namespace Ui
+  {
+  class RecipeModifyDialog;
+  }
 
 class RecipeModifyDialog : public QDialog
   {
     Q_OBJECT
 
-  public:
-    explicit RecipeModifyDialog(QWidget *parent = 0);
-    ~RecipeModifyDialog();
+    public:
+      explicit RecipeModifyDialog(QWidget *parent = 0);
+      ~RecipeModifyDialog();
 
-  private:
-    Ui::RecipeModifyDialog *ui;
+    private:
+      Ui::RecipeModifyDialog *ui;
   };
 
 #endif // RECIPEMODIFYDIALOG_H

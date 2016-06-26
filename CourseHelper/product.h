@@ -6,11 +6,15 @@
 class Product
   {
     public:
-      enum Measure { Liters, Grams, Quantity };
+      enum Measure { Quantity, Grams, Liters };
 
+    public:
+      unsigned int id;
       QString name;
       Measure measure;
-      Product(QString new_name = "", Measure new_measure = Liters);
+
+    public:
+      Product(QString new_name = "", Measure new_measure = Quantity);
   };
 
 #endif // PRODUCT_H

@@ -2,13 +2,12 @@
 #include "ui_recipemodifydialog.h"
 
 RecipeModifyDialog::RecipeModifyDialog(QWidget *parent) :
-  QDialog(parent),
-  ui(new Ui::RecipeModifyDialog)
+  QDialog(parent), ui(new Ui::RecipeModifyDialog)
   {
-  ui->setupUi(this);
+    ui->setupUi(this);
   }
 
 RecipeModifyDialog::~RecipeModifyDialog()
   {
-  delete ui;
+    delete ui;
   }

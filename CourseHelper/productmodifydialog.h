@@ -3,20 +3,21 @@
 
   #include <QDialog>
 
-namespace Ui {
-class ProductModifyDialog;
-}
+namespace Ui
+  {
+    class ProductModifyDialog;
+  }
 
 class ProductModifyDialog : public QDialog
   {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit ProductModifyDialog(QWidget *parent = 0,bool isNew = false);
-    ~ProductModifyDialog();
+    public:
+      explicit ProductModifyDialog(QWidget *parent = 0,bool isNew = false);
+      ~ProductModifyDialog();
 
-  private:
-    Ui::ProductModifyDialog *ui;
+    private:
+      Ui::ProductModifyDialog *ui;
   };
 
 #endif // PRODUCTMODIFYDIALOG_H

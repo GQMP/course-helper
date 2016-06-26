@@ -1,25 +1,26 @@
 #ifndef MAINWINDOW_H
-  #define MAINWINDOW_H
+#define MAINWINDOW_H
 
-  #include <QMainWindow>
+#include <QMainWindow>
 
-namespace Ui {
-class MainWindow;
-}
+namespace Ui
+  {
+    class MainWindow;
+  }
 
 class MainWindow : public QMainWindow
   {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
+    public:
+      explicit MainWindow(QWidget *parent = 0);
+      ~MainWindow();
 
-  private:
-    Ui::MainWindow *ui;
+    private:
+      Ui::MainWindow *ui;
 
-  public slots:
-    void on_addProduct();
+    public slots:
+      void on_addProduct();
   };
 
 #endif // MAINWINDOW_H

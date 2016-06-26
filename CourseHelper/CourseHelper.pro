@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     recipemodifydialog.cpp \
     product.cpp \
     recipe.cpp \
-    shoppinglist.cpp
+    shoppinglist.cpp \
+    productmodel.cpp
 
 HEADERS  += mainwindow.h \
     productmodifydialog.h \
     recipemodifydialog.h \
     product.h \
     recipe.h \
-    shoppinglist.h
+    shoppinglist.h \
+    productmodel.h
 
 FORMS    += mainwindow.ui \
     productmodifydialog.ui \

@@ -5,12 +5,18 @@
 
 int main(int argc, char *argv[])
   {
-  QApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-  MainWindow w;
-  //ProductModifyDialog w;
-  //RecipeModifyDialog w;
-  w.show();
+    /* High DPI Scaling */
+    //qputenv("QT_DEVICE_PIXEL_RATIO", QByteArray("2"));
+    //app.setAttribute(Qt::AA_EnableHighDpiScaling);
 
-  return app.exec();
+    /* Lancement fenêtre principale */
+
+    MainWindow w;
+    //ProductModifyDialog w;
+    //RecipeModifyDialog w;
+    w.show();
+
+    return app.exec();
   }

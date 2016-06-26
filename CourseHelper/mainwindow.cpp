@@ -6,16 +6,16 @@ MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
   {
-  ui->setupUi(this);
+    ui->setupUi(this);
   }
 
 void MainWindow::on_addProduct()
   {
-  ProductModifyDialog w(this,true);
-  w.exec();
+    ProductModifyDialog w(this, true);
+    w.exec();
   }
 
 MainWindow::~MainWindow()
   {
-  delete ui;
+    delete ui;
   }
