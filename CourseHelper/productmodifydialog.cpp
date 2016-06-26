@@ -7,6 +7,10 @@ ProductModifyDialog::ProductModifyDialog(QWidget *parent,bool isNew) :
   {
   ui->setupUi(this);
 
+  auto size = this->size();
+  this->setMaximumSize(size);
+  this->setMinimumSize(size);
+
   if(isNew)
     {
     ui->okButton->setText(tr("Ajouter"));

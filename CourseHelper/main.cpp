@@ -7,9 +7,9 @@ int main(int argc, char *argv[])
   {
   QApplication app(argc, argv);
 
-  //MainWindow w;
+  MainWindow w;
   //ProductModifyDialog w;
-  RecipeModifyDialog w;
+  //RecipeModifyDialog w;
   w.show();
 
   return app.exec();

@@ -1,16 +1,16 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
-#include <string>
+#include <QString>
 
 class Product
   {
     public:
       enum Measure { Liters, Grams, Quantity };
 
-      std::string name;
+      QString name;
       Measure measure;
-      Product(std::string new_name = "", Measure new_measure = Liters);
+      Product(QString new_name = "", Measure new_measure = Liters);
   };
 
 #endif // PRODUCT_H
