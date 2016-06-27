@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
     //app.setAttribute(Qt::AA_EnableHighDpiScaling);
 
     /* Lancement fenêtre principale */
-
     MainWindow w;
     //ProductModifyDialog w;
     //RecipeModifyDialog w;
