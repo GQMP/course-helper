@@ -5,11 +5,9 @@
 
 int main(int argc, char *argv[])
   {
-    QApplication app(argc, argv);
-
     /* High DPI Scaling */
-    //qputenv("QT_DEVICE_PIXEL_RATIO", QByteArray("2"));
-    //app.setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication app(argc, argv);
 
     /* Lancement fenêtre principale */
     MainWindow w;

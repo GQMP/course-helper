@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Modifier un produit</string>
+   <string>Ajouter un produit</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
@@ -44,7 +44,7 @@
       </sizepolicy>
      </property>
      <property name="title">
-      <string>Modifier un produit</string>
+      <string>Ajouter un produit</string>
      </property>
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
@@ -104,7 +104,7 @@
      <item>
       <widget class="QPushButton" name="okButton">
        <property name="text">
-        <string>Modifier</string>
+        <string>Ajouter</string>
        </property>
       </widget>
      </item>
@@ -120,5 +120,57 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ProductModifyDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ProductModifyDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>productName</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>ProductModifyDialog</receiver>
+   <slot>checkDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>checkDialog()</slot>
+ </slots>
 </ui>

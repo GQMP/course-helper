@@ -111,6 +111,9 @@ unsigned int ProductModel::nextId() const
 // Suppression d'un produit
 void ProductModel::erase(int row)
   {
+    if(row < 0 || (unsigned int)row >= productList.size())
+      return;
+
     // Changement visuel
     emit layoutAboutToBeChanged();
     productList.erase(productList.begin() + row);
@@ -123,6 +126,11 @@ void ProductModel::push_back(const Product& prod)
     emit layoutAboutToBeChanged();
     productList.push_back(prod);
     emit layoutChanged();
+  }
+
+std::vector<Product>::reference ProductModel::operator[](std::vector<Product>::size_type row)
+  {
+    return productList[row];
   }
 
 // Chargement des produits

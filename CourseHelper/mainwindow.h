@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QItemSelectionModel>
+
+class ProductModel;
 
 namespace Ui
   {
@@ -19,8 +22,13 @@ class MainWindow : public QMainWindow
     private:
       Ui::MainWindow *ui;
 
+      QItemSelectionModel *productSelection;
+      ProductModel *productModel;
+
     public slots:
       void on_addProduct();
+      void on_modifyProduct();
+      void on_deleteProduct();
   };
 
 #endif // MAINWINDOW_H
