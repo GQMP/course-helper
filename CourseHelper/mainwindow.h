@@ -29,6 +29,8 @@ class MainWindow : public QMainWindow
       void on_addProduct();
       void on_modifyProduct();
       void on_deleteProduct();
+
+      void checkProductButtons();
   };
 
 #endif // MAINWINDOW_H

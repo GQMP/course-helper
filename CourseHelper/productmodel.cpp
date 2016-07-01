@@ -133,6 +133,11 @@ std::vector<Product>::reference ProductModel::operator[](std::vector<Product>::s
     return productList[row];
   }
 
+std::vector<Product>::size_type ProductModel::size() const
+  {
+    return productList.size();
+  }
+
 // Chargement des produits
 void ProductModel::load(QDataStream &data)
   {

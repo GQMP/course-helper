@@ -365,6 +365,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="productModifyButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Modifier</string>
             </property>
@@ -372,6 +375,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="productDeleteButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Supprimer</string>
             </property>

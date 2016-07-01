@@ -14,6 +14,22 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->productTableView->setModel(productModel);
     ui->productTableView->setSelectionModel(productSelection);
+
+    connect(productSelection,SIGNAL(selectionChanged(QItemSelection,QItemSelection)),this,SLOT(checkProductButtons()));
+  }
+
+MainWindow::~MainWindow()
+  {
+    delete ui;
+  }
+
+void MainWindow::checkProductButtons()
+  {
+    unsigned int row = productSelection->currentIndex().row();
+    bool enable = productSelection->hasSelection() && row < productModel->size();
+
+    ui->productModifyButton->setEnabled(enable);
+    ui->productDeleteButton->setEnabled(enable);
   }
 
 void MainWindow::on_addProduct()
@@ -25,33 +41,33 @@ void MainWindow::on_addProduct()
       return;
 
     productModel->push_back(dlg.getProduct());
+
+    checkProductButtons();
   }
 
 void MainWindow::on_modifyProduct()
   {
-  unsigned int row = productSelection->currentIndex().row();
+    unsigned int row = productSelection->currentIndex().row();
 
-  Product p = (*productModel)[row];
-  unsigned int id = p.id;
-  ProductModifyDialog dlg(this,p);
+    Product p = (*productModel)[row];
+    unsigned int id = p.id;
+    ProductModifyDialog dlg(this,p);
 
-  bool ok = dlg.exec();
-  if(!ok)
-    return;
+    bool ok = dlg.exec();
+    if(!ok)
+      return;
 
-  (*productModel)[row] = dlg.getProduct();
-  (*productModel)[row].id = id;
+    (*productModel)[row] = dlg.getProduct();
+    (*productModel)[row].id = id;
+
+    checkProductButtons();
   }
 
 void MainWindow::on_deleteProduct()
   {
-    if(!productSelection->hasSelection())
-      return;
-
     productModel->erase(productSelection->currentIndex().row());
+
+    checkProductButtons();
   }
 
-MainWindow::~MainWindow()
-  {
-    delete ui;
-  }
+

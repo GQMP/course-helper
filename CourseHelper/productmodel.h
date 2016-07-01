@@ -30,6 +30,7 @@ class ProductModel : public QAbstractTableModel
       void save(QDataStream &data);
 
       std::vector<Product>::reference operator[](std::vector<Product>::size_type row);
+      std::vector<Product>::size_type size() const;
   };
 
 #endif // PRODUCTMODEL_H

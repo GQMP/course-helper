@@ -50,10 +50,7 @@ Product ProductModifyDialog::getProduct() const
 
 void ProductModifyDialog::checkDialog()
   {
-    if(ui->productName->text().isEmpty())
-      ui->okButton->setEnabled(false);
-    else
-      ui->okButton->setEnabled(true);
+    ui->okButton->setEnabled(!ui->productName->text().isEmpty());
   }
 
 
